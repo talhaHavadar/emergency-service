@@ -27,10 +27,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'devices',
-    component: DevicesComponent
-  },
-  {
     path: 'assets',
     component: AssetsComponent
   }, 

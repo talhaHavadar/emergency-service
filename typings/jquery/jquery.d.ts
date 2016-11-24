@@ -1185,6 +1185,8 @@ interface JQueryStatic {
  * The jQuery instance members
  */
 interface JQuery {
+
+    DataTable(options:any):any;
     /**
      * Register a handler to be called when Ajax requests complete. This is an AjaxEvent.
      *

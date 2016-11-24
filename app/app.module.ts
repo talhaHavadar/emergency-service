@@ -1,3 +1,5 @@
+import { DevicesRoutes } from './devices/devices.routing';
+import { DevicesCenterComponent } from './devices/devices-center.component';
 import { PersonelsCenterComponent } from './personels/personals-center.component';
 import { PersonelsRoutes } from './personels/personels.routing';
 import { AppRoutes } from './app.routing';
@@ -27,17 +29,22 @@ import { PersonelLocationsComponent } from './personel-locations/personel-locati
 import { PersonelDetailComponent } from './personels/personel-detail/personel-detail.component';
 import { PersonelNewComponent } from './personels/personel-new/personel-new.component';
 import { PersonelFormComponent } from './personels/personel-form/personel-form.component';
+import { DevicesNewComponent } from './devices/devices-new/devices-new.component';
+import { DeviceFormComponent } from './devices/device-form/device-form.component';
+import { DeviceDetailComponent } from './devices/device-detail/device-detail.component';
 
 @NgModule({
   imports: [ BrowserModule,
     FormsModule,
     AppRoutes,
-    PersonelsRoutes
+    PersonelsRoutes,
+    DevicesRoutes
 ],
   declarations: [ AppComponent,
     DashboardComponent,
     NavbarComponent,
     DevicesComponent,
+    DevicesCenterComponent,
     AssetsComponent,
     AlertsComponent,
     DiscoversComponent,
@@ -55,7 +62,10 @@ import { PersonelFormComponent } from './personels/personel-form/personel-form.c
     PersonelLocationsComponent,
     PersonelDetailComponent,
     PersonelNewComponent,
-    PersonelFormComponent
+    PersonelFormComponent,
+    DevicesNewComponent,
+    DeviceFormComponent,
+    DeviceDetailComponent
 ],
   bootstrap:    [ AppComponent ]
 })
