@@ -29,7 +29,7 @@ export class OrderEditComponent implements OnInit {
     this.orderService.updateOrder(order).then((data) => {
       if(data.success) {
         alert("implement with backend");
-        this.router.navigate(['orders']);
+        this.router.navigate(['orders', this.id]);
       }
     })
   }
