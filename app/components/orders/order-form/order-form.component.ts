@@ -1,5 +1,5 @@
 import { Order } from './../order';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-order-form',
@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderForm implements OnInit {
 
-  model = new Order();
-
+  @Input() model: Order;
+  @Output() formSubmitted: EventEmitter<Order> = new EventEmitter();
   submitted = false;
 
   constructor() { }
@@ -18,9 +18,9 @@ export class OrderForm implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit() { this.submitted = true; }
-
-  // TODO: Remove this when we're done
-  get diagnostic() { return JSON.stringify(this.model); }
+  onSubmit() { 
+    this.submitted = true; 
+    this.formSubmitted.emit(this.model);
+  }
 
 }
