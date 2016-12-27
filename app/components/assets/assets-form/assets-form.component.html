@@ -1,0 +1,22 @@
+<form class="form-horizontal" (ngSubmit)="onSubmit()" #AssetForm="ngForm">
+
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name" placeholder="Name">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">description</label>
+    <div class="col-sm-10">
+      <input type="text" required [(ngModel)]="model.description" name="type" class="form-control" id="type" placeholder="Type">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Serial No</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="serialNo" name="serialNo" [(ngModel)]="model.serialNo" placeholder="Serial No">
+    </div>
+  </div>

@@ -1,0 +1,50 @@
+<form class="form-horizontal" (ngSubmit)="onSubmit()" #personelForm="ngForm">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" required [(ngModel)]="model.name" name="name" class="form-control" id="name" placeholder="Name">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Surname</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="surname" name="surname" [(ngModel)]="model.surname" placeholder="Surname">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Type</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="type" name="type" [(ngModel)]="model.type" placeholder="Type">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Status</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="status" name="status" [(ngModel)]="model.status" placeholder="Status">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Identification No.</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="identification_no" name="identification_id" [(ngModel)]="model.identification_no" placeholder="Identification No.">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" [(ngModel)]="model.password" name="password" id="password" placeholder="Password">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary" [disabled]="!personelForm.form.valid">Add</button>
+    </div>
+  </div>
+</form>
