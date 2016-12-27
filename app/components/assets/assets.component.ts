@@ -11,14 +11,14 @@ declare var $: JQueryStatic;
 })
 export class AssetsComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   ngAfterViewInit() {
     $(document).ready(function() {
-      $('#dataTables-assets').DataTable({
+      $('#dataTables').DataTable({
         responsive: true
       });
 
