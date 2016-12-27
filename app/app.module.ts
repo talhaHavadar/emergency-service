@@ -96,7 +96,8 @@ import { OrderDetailComponent } from './components/orders/order-detail/order-det
     DrugConsumableDetailComponent,
     OrderDetailComponent,
     OrderForm,
-    OrderNewComponent
+    OrderNewComponent,
+    OrderCenterComponent
 ],
   bootstrap:    [ AppComponent ]
 })
