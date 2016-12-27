@@ -1,14 +1,13 @@
-import { AssetsComponent } from './assets.component';
 import { AssetCenterComponent } from './asset-center.component';
-import { AssetFormComponent } from './assets-form/assets-form.component';
 import { AssetNewComponent } from './assets-new/assets-new.component';
 import { AssetDetailComponent } from './asset-detail/asset-detail.component';
+import { AssetsComponent } from './assets.component';
 import{ Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
     path:'assets',
-    component:AssetsComponent,
+    component:AssetCenterComponent,
     children:[
       {
         path: 'new',
