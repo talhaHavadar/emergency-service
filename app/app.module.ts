@@ -59,7 +59,8 @@ import { OrderDetailComponent } from './components/orders/order-detail/order-det
     DrugConsumableRoutes,
     OrderRoutes
 ],
-  declarations: [ AppComponent,
+  declarations: [ 
+    AppComponent,
     DashboardComponent,
     NavbarComponent,
     DevicesComponent,
