@@ -7,8 +7,8 @@ import{ Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'drug_consumable',
-    component:DrugConsumablesComponent,
+    path:'drug-consumables',
+    component: DrugConsumablesCenterComponent,
     children:[
       {
         path: 'new',
