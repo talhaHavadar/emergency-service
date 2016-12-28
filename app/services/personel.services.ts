@@ -3,23 +3,30 @@ import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class PersonelService{
+export class PersonelService {
   constructor(private http: Http) {
     console.log("Personel Service Initilaze");
   }
-  httpService:string;
+  httpService: string;
 
-  getPersonel(id:number){
+  getPersonel(id: number) {
     return this.http.get(this.httpService)
       .map(res => res.json());
   }
 
-  getPersonels(){
+  getPersonels() {
     return this.http.get(this.httpService)
-      .map(res=>res.json());
+      .map(res => res.json());
   }
 
-  deletePersonel(id:number){
+  deletePersonel(id: number) {
+    return new Promise((resolve, reject) => {
+      resolve({
+        success: true
+      });
+    });
+  }
+  updatePersonel(personel: any) {
     return new Promise((resolve, reject) => {
       resolve({
         success: true
@@ -27,14 +34,13 @@ export class PersonelService{
     });
   }
 
-  updatePersonel(personel: any) {
-    return new Promise((resolve, reject) =>{
+  createPersonel(personel: any) {
+    return new Promise((resolve, reject) => {
       resolve({
-        success:true
+        success: true
       });
     });
   }
-
 
   // deletePersonel(1).then((data) => {
   //
