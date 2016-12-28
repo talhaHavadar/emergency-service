@@ -48,9 +48,11 @@ import { OrderCenterComponent } from './components/orders/order-center.component
 import { OrderForm } from './components/orders/order-form/order-form.component';
 import { OrderNewComponent } from './components/orders/order-new/order-new.component';
 import { OrderDetailComponent } from './components/orders/order-detail/order-detail.component';
+import { OrderEditComponent } from './components/orders/order-edit/order-edit.component';
 
 @NgModule({
-  imports: [ BrowserModule,
+  imports: [ 
+    BrowserModule,
     FormsModule,
     AppRoutes,
     PersonelsRoutes,
@@ -97,7 +99,8 @@ import { OrderDetailComponent } from './components/orders/order-detail/order-det
     OrderDetailComponent,
     OrderForm,
     OrderNewComponent,
-    OrderCenterComponent
+    OrderCenterComponent,
+    OrderEditComponent
 ],
   bootstrap:    [ AppComponent ]
 })

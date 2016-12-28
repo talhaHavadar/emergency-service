@@ -1,7 +1,13 @@
 <div id="page-wrapper">
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="page-header">Order Detail</h1>
+      <h1 class="page-header">Order Detail
+        <div class="col-lg-5 pull-right">
+            <button class="btn btn-danger pull-right" (click)="delete()">Delete</button>
+            <button class="btn btn-primary pull-right" style="margin-right: 5px" (click)="edit()">Edit</button>
+        </div>
+      </h1>
+      
     </div>
   </div>
   <div class="row">
@@ -9,14 +15,14 @@
       <div class="form-group">
         <label for="inputEmail3" class="col-sm-2 control-label">Responsive Person</label>
         <div class="col-sm-10">
-          <p>{{ model.responsivePerson }}</p>
+          <p>{{ model.responsivePerson.name }}</p>
         </div>
       </div>
 
       <div class="form-group">
         <label for="inputEmail3" class="col-sm-2 control-label">Patient</label>
         <div class="col-sm-10">
-          <p>{{ model.patient }}</p>
+          <p>{{ model.patient.name }}</p>
         </div>
       </div>
 

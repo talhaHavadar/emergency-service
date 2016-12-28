@@ -10,7 +10,7 @@
   <!-- /.row -->
   <div class="row">
       <div class="col-lg-12">
-        <app-order-form></app-order-form>
+        <app-order-form [model]="order" (formSubmitted)="newOrder($event)"></app-order-form>
       </div>
       <!-- /.col-lg-12 -->
   </div>

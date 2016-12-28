@@ -1,3 +1,4 @@
+import { OrderEditComponent } from './order-edit/order-edit.component';
 import { OrdersComponent } from './orders.component';
 import { OrderCenterComponent } from './order-center.component';
 import { OrderForm } from './order-form/order-form.component';
@@ -11,7 +12,10 @@ const routes: Routes = [{
   children: [{
     path: 'new',
     component: OrderNewComponent
-  }, {
+  },{
+    path: 'edit/:id',
+    component: OrderEditComponent
+  },{
     path: ':id',
     component: OrderDetailComponent
   }, {
