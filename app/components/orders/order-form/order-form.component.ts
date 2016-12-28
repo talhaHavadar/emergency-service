@@ -18,8 +18,8 @@ export class OrderForm implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit() { 
-    this.submitted = true; 
+  onSubmit() {
+    this.submitted = true;
     this.formSubmitted.emit(this.model);
   }
 

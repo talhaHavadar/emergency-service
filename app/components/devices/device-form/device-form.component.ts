@@ -1,5 +1,5 @@
 import { Device } from './../device';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-device-form',
@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeviceFormComponent implements OnInit {
 
-  model = new Device(1, "deneme", "solunum cihazı", "125sdsdfd522" );
-
+  @Input() model: Device;
+  @Output() formSubmitted: EventEmitter<Device> = new EventEmitter();
   submitted = false;
 
   constructor() { }
@@ -18,9 +18,8 @@ export class DeviceFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit() { this.submitted = true; }
-
-  // TODO: Remove this when we're done
-  get diagnostic() { return JSON.stringify(this.model); }
-
+  onSubmit() {
+    this.submitted = true;
+    this.formSubmitted.emit(this.model);
+  }
 }

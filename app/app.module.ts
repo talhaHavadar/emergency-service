@@ -30,12 +30,15 @@ import { PersonelLocationsComponent } from './components/personel-locations/pers
 import { PersonelDetailComponent } from './components/personels/personel-detail/personel-detail.component';
 import { PersonelNewComponent } from './components/personels/personel-new/personel-new.component';
 import { PersonelFormComponent } from './components/personels/personel-form/personel-form.component';
+import { PersonelEditComponent } from './components/personels/personel-edit/personel-edit.component';
 import { DeviceDetailComponent } from './components/devices/device-detail/device-detail.component';
 import { DeviceNewComponent } from './components/devices/device-new/device-new.component';
 import { DeviceFormComponent } from './components/devices/device-form/device-form.component';
 import { DeviceCenterComponent } from './components/devices/device-center.component';
+import { DeviceEditComponent } from './components/devices/device-edit/device-edit.component';
 import { AssetFormComponent } from './components/assets/assets-form/assets-form.component';
 import { AssetNewComponent } from './components/assets/assets-new/assets-new.component';
+import { AssetEditComponent } from './components/assets/asset-edit/asset-edit.component';
 import { AssetDetailComponent } from './components/assets/asset-detail/asset-detail.component';
 import { DrugConsumableRoutes } from './components/drug-consumables/drug-consumable.routing';
 import { AssetCenterComponent } from './components/assets/asset-center.component';
@@ -51,7 +54,7 @@ import { OrderDetailComponent } from './components/orders/order-detail/order-det
 import { OrderEditComponent } from './components/orders/order-edit/order-edit.component';
 
 @NgModule({
-  imports: [ 
+  imports: [
     BrowserModule,
     FormsModule,
     AppRoutes,
@@ -61,7 +64,7 @@ import { OrderEditComponent } from './components/orders/order-edit/order-edit.co
     DrugConsumableRoutes,
     OrderRoutes
 ],
-  declarations: [ 
+  declarations: [
     AppComponent,
     DashboardComponent,
     NavbarComponent,
@@ -84,14 +87,17 @@ import { OrderEditComponent } from './components/orders/order-edit/order-edit.co
     PersonelDetailComponent,
     PersonelNewComponent,
     PersonelFormComponent,
+    PersonelEditComponent,
     DeviceDetailComponent,
     DeviceNewComponent,
     DeviceFormComponent,
     DeviceCenterComponent,
+    DeviceEditComponent,
     AssetDetailComponent,
     AssetFormComponent,
     AssetCenterComponent,
     AssetNewComponent,
+    AssetEditComponent,
     DrugConsumablesCenterComponent,
     DrugConsumableForm,
     DrugConsumableNewComponent,

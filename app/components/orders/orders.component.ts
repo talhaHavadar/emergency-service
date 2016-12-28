@@ -15,7 +15,6 @@ export class OrdersComponent implements OnInit, AfterViewInit {
 
   private orders: Order[];
 
-
   constructor(private router: Router, private orderService: OrderService) {}
 
   ngOnInit() {
@@ -38,8 +37,6 @@ export class OrdersComponent implements OnInit, AfterViewInit {
         });
       });
     });
-    
-    
   }
 
   navigateAddOrder() {

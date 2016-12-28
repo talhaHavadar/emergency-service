@@ -1,22 +1,32 @@
+import { Personel } from './../components/personels/personel';
+import { PERSONELS } from  './dummies/personels';
+import { PERSONEL } from './dummies/personel';
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class PersonelService {
-  constructor(private http: Http) {
-    console.log("Personel Service Initilaze");
-  }
-  httpService: string;
+  constructor() { }
 
-  getPersonel(id: number) {
-    return this.http.get(this.httpService)
-      .map(res => res.json());
+  createPersonel(personel: Personel) {
+    return Promise.resolve({
+      success: true
+    });
   }
 
-  getPersonels() {
-    return this.http.get(this.httpService)
-      .map(res => res.json());
+  getPersonels():Promise<Personel[]> {
+    return Promise.resolve(PERSONELS);
+  }
+
+  getPersonel(personelId: number):Promise<Personel> {
+    return Promise.resolve(PERSONEL);
+  }
+
+  updatePersonel(updatePersonel: Personel) {
+    return Promise.resolve({
+      success: true
+    })
   }
 
   deletePersonel(id: number) {
@@ -26,21 +36,14 @@ export class PersonelService {
       });
     });
   }
-  updatePersonel(personel: any) {
-    return new Promise((resolve, reject) => {
-      resolve({
-        success: true
-      });
-    });
+
+  deletePersonel(personelId:number){
+    return Promise.resolve({
+      success: true
+    })
   }
 
-  createPersonel(personel: any) {
-    return new Promise((resolve, reject) => {
-      resolve({
-        success: true
-      });
-    });
-  }
+}
 
   // deletePersonel(1).then((data) => {
   //

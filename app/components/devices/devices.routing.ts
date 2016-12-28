@@ -1,3 +1,4 @@
+import { DeviceEditComponent } from './device-edit/device-edit.component';
 import { DeviceNewComponent } from './device-new/device-new.component';
 import { DeviceCenterComponent } from './device-center.component';
 import { DeviceDetailComponent } from './device-detail/device-detail.component';
@@ -12,8 +13,10 @@ const routes: Routes = [
       {
         path: 'new',
         component: DeviceNewComponent
-      },
-      {
+      },{
+        path: 'edit/:id',
+        component: DeviceEditComponent
+      },{
         path:':id',
         component: DeviceDetailComponent
       },

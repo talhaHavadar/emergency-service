@@ -1,5 +1,8 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { AssetService } from '../../services/assets.services';
+import { Asset } from './asset';
+
 
 declare var $: JQueryStatic;
 
@@ -7,23 +10,32 @@ declare var $: JQueryStatic;
   selector: 'app-assets',
   moduleId: module.id,
   templateUrl: 'assets.component.html',
-  styleUrls: ['assets.component.css']
+  styleUrls: ['assets.component.css'],
+  providers:[AssetService]
 })
 export class AssetsComponent implements OnInit, AfterViewInit {
 
-  constructor(private router: Router) { }
+private assets:Asset[];
+
+  constructor(private router: Router, private assetService:AssetService) { }
 
   ngOnInit() {
   }
 
   ngAfterViewInit() {
-    $(document).ready(function() {
-      $('#dataTables').DataTable({
-        responsive: true
-      });
+    var ROUTER = this.router;
+    this.assetService.getAssets().then((assets) => {
 
-      $('#dataTables').on('click', 'tr', function() {
-        ROUTER.navigate(['/assets/1']);
+      this.assets = assets
+      // Html kısmında orders ngfor ile dönülerek yazılıyor.
+      $(document).ready(function() {
+        $('#dataTables').DataTable({
+          responsive: true
+        });
+
+        $('#dataTables').on('click', 'tr', function() {
+          ROUTER.navigate(['/assets/1']);
+        });
       });
     });
   }

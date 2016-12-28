@@ -6,6 +6,6 @@ export class Drug{
     public description: string,
     public tag:number, //değişebilir tagDto
     public barcode:string,
-    public ExpirationDate: Date
+    public ExpirationDate: string
   ){}
 }

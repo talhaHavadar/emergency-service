@@ -1,3 +1,4 @@
+import { AssetEditComponent } from './asset-edit/asset-edit.component';
 import { AssetCenterComponent } from './asset-center.component';
 import { AssetNewComponent } from './assets-new/assets-new.component';
 import { AssetDetailComponent } from './asset-detail/asset-detail.component';
@@ -12,6 +13,9 @@ const routes: Routes = [
       {
         path: 'new',
         component: AssetNewComponent
+      },{
+        path:'edit/:id',
+        component:AssetEditComponent
       },
       {
         path:':id',

@@ -1,3 +1,5 @@
+import { PersonelService } from './../../services/personel.services';
+import { Personel } from './personel';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 declare var $:JQueryStatic;
@@ -5,24 +7,32 @@ declare var $:JQueryStatic;
   selector: 'app-personels',
   moduleId: module.id,
   templateUrl: './personels.component.html',
-  styleUrls: ['./personels.component.css']
+  styleUrls: ['./personels.component.css'],
+  providers:[PersonelService]
 })
 export class PersonelsComponent implements OnInit, AfterViewInit {
 
-  constructor(private router: Router) { }
+  private personels: Personel[];
+
+
+  constructor(private router: Router, private personelService:PersonelService) { }
 
   ngOnInit() {
   }
 
   ngAfterViewInit() {
     var ROUTER = this.router;
-    $(document).ready(function() {
-        var table = $('#dataTables').DataTable({
-            responsive: true
-        });
-        $('#dataTables').on('click', 'tr', function() {
-          ROUTER.navigate(['/personels/1']);
-        });
+    this.personelService.getPersonels().then((personels)=>{
+      this.personels = personels
+
+      $(document).ready(function() {
+          var table = $('#dataTables').DataTable({
+              responsive: true
+          });
+          $('#dataTables').on('click', 'tr', function() {
+            ROUTER.navigate(['/personels/1']);
+          });
+      });
     });
   }
 
