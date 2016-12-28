@@ -12,14 +12,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AssetNewComponent implements OnInit {
 
-    asset: Asset = new Asset(0,"","","");
+    asset: Asset = new Asset();
 
     constructor(private router: Router, private assetService: AssetService) { }
 
     ngOnInit() {
     }
 
-    newOrder(asset: Asset) {
+    newAsset(asset: Asset) {
       this.assetService.createAsset(asset).then((data) => {
         if(data.success) {
           alert("implement with backend");

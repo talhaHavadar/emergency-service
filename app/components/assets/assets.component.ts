@@ -15,7 +15,7 @@ declare var $: JQueryStatic;
 })
 export class AssetsComponent implements OnInit, AfterViewInit {
 
-private assets:Asset[];
+  private assets:Asset[];
 
   constructor(private router: Router, private assetService:AssetService) { }
 
@@ -29,11 +29,11 @@ private assets:Asset[];
       this.assets = assets
       // Html kısmında orders ngfor ile dönülerek yazılıyor.
       $(document).ready(function() {
-        $('#dataTables').DataTable({
+        $('#dataTables-assets').DataTable({
           responsive: true
         });
 
-        $('#dataTables').on('click', 'tr', function() {
+        $('#dataTables-assets').on('click', 'tr', function() {
           ROUTER.navigate(['/assets/1']);
         });
       });
