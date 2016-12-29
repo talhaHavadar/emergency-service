@@ -38,10 +38,6 @@ const routes: Routes = [
     component: DistributionsComponent
   },
   {
-    path: 'const-locations',
-    component: ConstLocationsComponent
-  },
-  {
     path: 'packets',
     component: PacketsComponent
   },

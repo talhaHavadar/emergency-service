@@ -1,3 +1,5 @@
+import { ConstLocationsCenterComponent } from './components/const-locations/const-locations-center.component';
+import { ClocationsRoutes } from './components/const-locations/clocations.routing';
 import { AdminsCenterComponent } from './components/admins/admins-center.component';
 
 import { PersonelsCenterComponent } from './components/personels/personals-center.component';
@@ -66,6 +68,10 @@ import { AdminsDetailComponent } from './components/admins/admins-detail/admins-
 import { AdminsNewComponent } from './components/admins/admins-new/admins-new.component';
 import { AdminsEditComponent } from './components/admins/admins-edit/admins-edit.component';
 import { AdminsFormComponent } from './components/admins/admins-form/admins-form.component';
+import { ClocationsEditComponent } from './components/const-locations/clocations-edit/clocations-edit.component';
+import { ClocationsNewComponent } from './components/const-locations/clocations-new/clocations-new.component';
+import { ClocationsDetailComponent } from './components/const-locations/clocations-detail/clocations-detail.component';
+import { ClocationsFormComponent } from './components/const-locations/clocations-form/clocations-form.component';
 
 
 @NgModule({
@@ -79,7 +85,8 @@ import { AdminsFormComponent } from './components/admins/admins-form/admins-form
     DrugConsumableRoutes,
     OrderRoutes,
     TagsRoutes,
-    AdminsRoutes
+    AdminsRoutes,
+    ClocationsRoutes
 ],
   declarations: [
     AppComponent,
@@ -134,7 +141,12 @@ import { AdminsFormComponent } from './components/admins/admins-form/admins-form
     AdminsNewComponent,
     AdminsEditComponent,
     AdminsFormComponent,
-    AdminsCenterComponent
+    AdminsCenterComponent,
+    ClocationsEditComponent,
+    ClocationsNewComponent,
+    ClocationsDetailComponent,
+    ClocationsFormComponent,
+    ConstLocationsCenterComponent
 ],
   bootstrap:    [ AppComponent ]
 })
