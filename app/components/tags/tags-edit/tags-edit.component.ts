@@ -12,21 +12,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TagEditComponent implements OnInit {
   id: number;
-  tags: Tags = new Tags(0, "","");
+  tag: Tags = new Tags(0, "","");
 
   constructor(private router: Router, private route: ActivatedRoute, private tagService: TagService) { }
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       this.id = +params['id'];
-      this.tagService.getTag(this.id).then((tags: Tags) => {
-        this.tags = Tags;
+      this.tagService.getTag(this.id).then((tag: Tags) => {
+        this.tag = tag;
       })
     });
   }
 
-  editOrder(tags: Tags) {
-    this.tagService.updateTag(tags).then((data) => {
+  editTag(tag: Tags) {
+    this.tagService.updateTag(tag).then((data) => {
       if(data.success) {
         alert("implement with backend");
         this.router.navigate(['tags', this.id]);

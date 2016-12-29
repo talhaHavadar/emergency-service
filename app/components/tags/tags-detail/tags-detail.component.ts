@@ -37,6 +37,7 @@ export class TagsDetailComponent implements OnInit, OnDestroy {
     this.tagService.deleteTag(this.model.id).then((data) => {
       if(data.success) {
         alert("delete order implement with backend");
+        this.router.navigate(['/tags']);
       }
     });
   }

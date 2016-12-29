@@ -2,7 +2,9 @@ import { PersonelService } from './../../services/personel.services';
 import { Personel } from './personel';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+
 declare var $:JQueryStatic;
+
 @Component({
   selector: 'app-personels',
   moduleId: module.id,
