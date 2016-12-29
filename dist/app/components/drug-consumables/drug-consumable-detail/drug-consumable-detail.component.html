@@ -1,7 +1,12 @@
 <div id="page-wrapper">
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="page-header">Drug Consumable Detail</h1>
+      <h1 class="page-header">Drug Consumable Detail
+        <div class="col-lg-5 pull-right">
+          <button class="btn btn-danger pull-right" (click)="delete()">Delete</button>
+          <button class="btn btn-primary pull-right" style="margin-right: 5px" (click)="edit()">Edit</button>
+        </div>
+      </h1>
     </div>
   </div>
   <div class="row">

@@ -10,7 +10,7 @@
   <!-- /.row -->
   <div class="row">
       <div class="col-lg-12">
-        <app-drug-consumable-form></app-drug-consumable-form>
+        <app-drug-form [model]="drug" (formSubmitted)="newDrug($event)"></app-drug-form>
       </div>
       <!-- /.col-lg-12 -->
   </div>

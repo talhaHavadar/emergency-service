@@ -52,6 +52,7 @@ import { OrderForm } from './components/orders/order-form/order-form.component';
 import { OrderNewComponent } from './components/orders/order-new/order-new.component';
 import { OrderDetailComponent } from './components/orders/order-detail/order-detail.component';
 import { OrderEditComponent } from './components/orders/order-edit/order-edit.component';
+import { DrugConsumableEditComponent } from './components/drug-consumables/drug-consumable-edit/drug-consumable-edit.component';
 
 @NgModule({
   imports: [
@@ -106,7 +107,8 @@ import { OrderEditComponent } from './components/orders/order-edit/order-edit.co
     OrderForm,
     OrderNewComponent,
     OrderCenterComponent,
-    OrderEditComponent
+    OrderEditComponent,
+    DrugConsumableEditComponent
 ],
   bootstrap:    [ AppComponent ]
 })
