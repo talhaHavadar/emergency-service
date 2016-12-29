@@ -1,5 +1,4 @@
 import { PersonelLocationsComponent } from './components/personel-locations/personel-locations.component';
-import { AdminsComponent } from './components/admins/admins.component';
 import { UnauthorizedExitsComponent } from './components/unauthorized-exits/unauthorized-exits.component';
 import { TagsComponent } from './components/tags/tags.component';
 import { PersonelsComponent } from './components/personels/personels.component';
@@ -53,10 +52,6 @@ const routes: Routes = [
   {
     path: 'unauthorized-exits',
     component: UnauthorizedExitsComponent
-  },
-  {
-    path: 'admins',
-    component: AdminsComponent
   },
   {
     path: 'personel-locations',

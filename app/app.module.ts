@@ -1,8 +1,10 @@
+import { AdminsCenterComponent } from './components/admins/admins-center.component';
 
 import { PersonelsCenterComponent } from './components/personels/personals-center.component';
 import { PersonelsRoutes } from './components/personels/personels.routing';
 import { DevicesRoutes } from './components/devices/devices.routing';
 import { AssetsRoutes } from './components/assets/assets.routing';
+import { AdminsRoutes } from './components/admins/admin.routing';
 import { AppRoutes } from './app.routing';
 import { RouterModule } from '@angular/router';
 import { NgModule }      from '@angular/core';
@@ -60,6 +62,10 @@ import { TagsFormComponent} from './components/tags/tags-form/tags-form.componen
 import { TagsRoutes } from './components/tags/tags.routing';
 
 import { DrugConsumableEditComponent } from './components/drug-consumables/drug-consumable-edit/drug-consumable-edit.component';
+import { AdminsDetailComponent } from './components/admins/admins-detail/admins-detail.component';
+import { AdminsNewComponent } from './components/admins/admins-new/admins-new.component';
+import { AdminsEditComponent } from './components/admins/admins-edit/admins-edit.component';
+import { AdminsFormComponent } from './components/admins/admins-form/admins-form.component';
 
 
 @NgModule({
@@ -72,7 +78,8 @@ import { DrugConsumableEditComponent } from './components/drug-consumables/drug-
     AssetsRoutes,
     DrugConsumableRoutes,
     OrderRoutes,
-    TagsRoutes
+    TagsRoutes,
+    AdminsRoutes
 ],
   declarations: [
     AppComponent,
@@ -122,7 +129,12 @@ import { DrugConsumableEditComponent } from './components/drug-consumables/drug-
     TagsCenterComponent,
     TagsFormComponent,
     TagNewComponent,
-    DrugConsumableEditComponent
+    DrugConsumableEditComponent,
+    AdminsDetailComponent,
+    AdminsNewComponent,
+    AdminsEditComponent,
+    AdminsFormComponent,
+    AdminsCenterComponent
 ],
   bootstrap:    [ AppComponent ]
 })
