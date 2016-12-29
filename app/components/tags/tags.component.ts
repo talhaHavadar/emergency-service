@@ -1,4 +1,7 @@
+import {TagService} from '../../services/tags.services';
+import { Tags } from './tags';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 declare var $:JQueryStatic;
 
@@ -10,17 +13,32 @@ declare var $:JQueryStatic;
 })
 export class TagsComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+    private tags: Tags[];
 
-  ngOnInit() {
-  }
+    constructor( private router: Router, private tagsService:TagService ) { }
 
-  ngAfterViewInit() {
-    $(document).ready(function() {
-        $('#dataTables').DataTable({
+    ngOnInit() {
+
+    }
+    ngAfterViewInit() {
+      var ROUTER = this.router;
+      this.tagsService.getTags().then((tags)=>{
+        this.tags = tags
+
+        $(document).ready(function() {
+          $('#dataTables').DataTable({
             responsive: true
+          });
         });
-    });
-  }
+        $('#dataTables').on('click', 'tr', function() {
+          ROUTER.navigate(['/tags/1']);
+        });
+      });
+    }
+
+    navigateAddTag() {
+      this.router.navigate(['/tags/new']);
+    }
+
 
 }

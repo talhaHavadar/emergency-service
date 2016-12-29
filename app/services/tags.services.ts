@@ -1,6 +1,6 @@
 import { Tags } from './../components/tags/tags';
-import { TAG } from './dummies/device';
-import { TAGS } from './dummies/devices';
+import { TAG } from './dummies/tag';
+import { TAGS } from './dummies/tags';
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';

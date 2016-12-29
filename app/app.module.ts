@@ -52,6 +52,13 @@ import { OrderForm } from './components/orders/order-form/order-form.component';
 import { OrderNewComponent } from './components/orders/order-new/order-new.component';
 import { OrderDetailComponent } from './components/orders/order-detail/order-detail.component';
 import { OrderEditComponent } from './components/orders/order-edit/order-edit.component';
+import { TagEditComponent } from './components/tags/tags-edit/tags-edit.component';
+import { TagNewComponent } from './components/tags/tags-new/tags-new.component';
+import { TagsCenterComponent } from './components/tags/tags-center.component';
+import { TagsDetailComponent } from './components/tags/tags-detail/tags-detail.component';
+import { TagsFormComponent} from './components/tags/tags-form/tags-form.component';
+import { TagsRoutes } from './components/tags/tags.routing';
+
 
 @NgModule({
   imports: [
@@ -62,7 +69,8 @@ import { OrderEditComponent } from './components/orders/order-edit/order-edit.co
     DevicesRoutes,
     AssetsRoutes,
     DrugConsumableRoutes,
-    OrderRoutes
+    OrderRoutes,
+    TagsRoutes
 ],
   declarations: [
     AppComponent,
@@ -106,7 +114,12 @@ import { OrderEditComponent } from './components/orders/order-edit/order-edit.co
     OrderForm,
     OrderNewComponent,
     OrderCenterComponent,
-    OrderEditComponent
+    OrderEditComponent,
+    TagEditComponent,
+    TagsDetailComponent,
+    TagsCenterComponent,
+    TagsFormComponent,
+    TagNewComponent
 ],
   bootstrap:    [ AppComponent ]
 })

@@ -51,10 +51,6 @@ const routes: Routes = [
     component: PassesComponent
   },
   {
-    path: 'tags',
-    component: TagsComponent
-  },
-  {
     path: 'unauthorized-exits',
     component: UnauthorizedExitsComponent
   },
