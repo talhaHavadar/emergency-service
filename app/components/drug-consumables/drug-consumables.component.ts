@@ -1,3 +1,4 @@
+import { DrugConsumableService } from './../../services/drug-consumable.services';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
@@ -11,7 +12,7 @@ declare var $: JQueryStatic;
 })
 export class DrugConsumablesComponent implements OnInit, AfterViewInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private drugService: DrugConsumableService) { }
 
   ngOnInit() {
   }
