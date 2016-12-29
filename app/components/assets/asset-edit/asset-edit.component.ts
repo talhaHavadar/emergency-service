@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AssetEditComponent implements OnInit {
   id: number;
-  asset: Asset = new Asset(0,"","","");
+  asset: Asset = new Asset();
 
   constructor(private router: Router, private route: ActivatedRoute, private assetService: AssetService) { }
 
@@ -25,11 +25,11 @@ export class AssetEditComponent implements OnInit {
     });
   }
 
-  editOrder(order: Order) {
-    this.orderService.updateOrder(order).then((data) => {
+  editAsset(asset: Asset) {
+    this.assetService.updateAsset(asset).then((data) => {
       if(data.success) {
         alert("implement with backend");
-        this.router.navigate(['orders', this.id]);
+        this.router.navigate(['assets', this.id]);
       }
     })
   }

@@ -59,6 +59,8 @@ import { TagsDetailComponent } from './components/tags/tags-detail/tags-detail.c
 import { TagsFormComponent} from './components/tags/tags-form/tags-form.component';
 import { TagsRoutes } from './components/tags/tags.routing';
 
+import { DrugConsumableEditComponent } from './components/drug-consumables/drug-consumable-edit/drug-consumable-edit.component';
+
 
 @NgModule({
   imports: [
@@ -119,7 +121,8 @@ import { TagsRoutes } from './components/tags/tags.routing';
     TagsDetailComponent,
     TagsCenterComponent,
     TagsFormComponent,
-    TagNewComponent
+    TagNewComponent,
+    DrugConsumableEditComponent
 ],
   bootstrap:    [ AppComponent ]
 })

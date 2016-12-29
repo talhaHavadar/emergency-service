@@ -1,3 +1,4 @@
+import { DrugConsumableEditComponent } from './drug-consumable-edit/drug-consumable-edit.component';
 import { DrugConsumablesComponent } from './drug-consumables.component';
 import { DrugConsumablesCenterComponent } from './drug-consumable-center.component';
 import { DrugConsumableForm } from './drug-consumable-form/drug-consumable-form.component';
@@ -7,12 +8,16 @@ import{ Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'drug_consumable',
-    component:DrugConsumablesComponent,
+    path:'drug-consumables',
+    component: DrugConsumablesCenterComponent,
     children:[
       {
         path: 'new',
         component: DrugConsumableNewComponent
+      },
+      {
+        path:'edit/:id',
+        component: DrugConsumableEditComponent
       },
       {
         path:':id',

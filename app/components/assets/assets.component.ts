@@ -11,29 +11,28 @@ declare var $: JQueryStatic;
   moduleId: module.id,
   templateUrl: 'assets.component.html',
   styleUrls: ['assets.component.css'],
-  providers:[AssetService]
+  providers: [AssetService]
 })
 export class AssetsComponent implements OnInit, AfterViewInit {
 
-private assets:Asset[];
+  private assets: Asset[];
 
-  constructor(private router: Router, private assetService:AssetService) { }
+  constructor(private router: Router, private assetService: AssetService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   ngAfterViewInit() {
     var ROUTER = this.router;
     this.assetService.getAssets().then((assets) => {
 
       this.assets = assets
-      // Html kısmında orders ngfor ile dönülerek yazılıyor.
-      $(document).ready(function() {
-        $('#dataTables').DataTable({
+        // Html kısmında orders ngfor ile dönülerek yazılıyor.
+      $(document).ready(function () {
+        $('#dataTables-assets').DataTable({
           responsive: true
         });
 
-        $('#dataTables').on('click', 'tr', function() {
+        $('#dataTables-assets').on('click', 'tr', function () {
           ROUTER.navigate(['/assets/1']);
         });
       });
