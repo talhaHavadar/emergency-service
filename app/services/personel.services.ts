@@ -30,14 +30,6 @@ export class PersonelService {
   }
 
   deletePersonel(id: number) {
-    return new Promise((resolve, reject) => {
-      resolve({
-        success: true
-      });
-    });
-  }
-
-  deletePersonel(personelId:number){
     return Promise.resolve({
       success: true
     })

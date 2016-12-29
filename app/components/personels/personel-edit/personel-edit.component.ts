@@ -25,7 +25,7 @@ export class PersonelEditComponent implements OnInit {
     });
   }
 
-  editOrder(personel: Personel) {
+  editPersonel(personel: Personel) {
     this.personelService.updatePersonel(personel).then((data) => {
       if(data.success) {
         alert("implement with backend");
